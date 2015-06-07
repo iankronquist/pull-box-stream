@@ -1,8 +1,5 @@
 language: node_js
-before_script:
-  - npm upgrade npm -g 
-  - npm install
 script:
   - npm test
 node_js:
-  - 0.8
+  - 0.10

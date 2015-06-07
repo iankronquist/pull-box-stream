@@ -45,7 +45,7 @@ function randomSecret(n) {
 
 function copy (a) {
   var b = new Buffer(a.length)
-  //a.copy(b, 0, 0, a.length)
+  a.copy(b, 0, 0, a.length)
   return b
 }
 
@@ -106,7 +106,7 @@ exports.createDecryptStream = function (key, nonce) {
     throw new Error('nonce must be 24 bytes')
 
   var reader = Reader(), first = true,  ended
-  var first = false
+  var first = true
 
   return function (read) {
     reader(read)
